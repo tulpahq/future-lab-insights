@@ -15,8 +15,8 @@ const Index = () => {
     e.preventDefault();
     if (email) {
       toast({
-        title: "Thanks for your interest!",
-        description: "We'll be in touch soon with updates.",
+        title: "Thanks for reaching out!",
+        description: "We'll be in touch to learn more about your needs.",
       });
       setEmail("");
     }
@@ -42,7 +42,7 @@ const Index = () => {
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
             We're building something extraordinary for research teams. 
-            Something that will transform how science gets done.
+            Help us shape the future of how science gets done.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <form onSubmit={handleEarlyAccess} className="flex gap-2 w-full max-w-md">
@@ -55,7 +55,7 @@ const Index = () => {
                 required
               />
               <Button type="submit" className="bg-blue-600 hover:bg-blue-700">
-                Get Early Access
+                Let's Talk
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </form>
@@ -104,25 +104,26 @@ const Index = () => {
       {/* Mystery Section */}
       <section className="px-6 py-20 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">We're in stealth mode</h2>
+          <h2 className="text-4xl font-bold mb-6">Let's build this together</h2>
           <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-            Our team of former researchers and engineers is solving problems that have 
-            frustrated scientists for decades. We can't say much yet, but we're building 
-            something that will fundamentally change how research gets done.
+            Our team of former researchers and engineers is tackling problems that have 
+            frustrated scientists for decades. We're looking for visionary research teams 
+            to collaborate with us in creating something that will fundamentally change 
+            how science gets done.
           </p>
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             <div className="text-left">
-              <h3 className="text-lg font-semibold mb-3 text-blue-400">For Research Teams</h3>
+              <h3 className="text-lg font-semibold mb-3 text-blue-400">Partner With Us</h3>
               <p className="text-slate-300">
-                Whether you're in biotech, pharma, academia, or industrial R&D, 
-                we're building for your specific challenges.
+                Share your biggest challenges and help us understand what the future 
+                of laboratory software should look like.
               </p>
             </div>
             <div className="text-left">
-              <h3 className="text-lg font-semibold mb-3 text-purple-400">Launching Soon</h3>
+              <h3 className="text-lg font-semibold mb-3 text-purple-400">Shape the Future</h3>
               <p className="text-slate-300">
-                Join our early access program and help shape the future of 
-                laboratory software.
+                Work directly with our team to design solutions that address your 
+                specific research workflows and pain points.
               </p>
             </div>
           </div>
