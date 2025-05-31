@@ -11,14 +11,27 @@ const Index = () => {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
 
-  const handleEarlyAccess = (e: React.FormEvent) => {
+  const handleEarlyAccess = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      toast({
-        title: "Thanks for reaching out!",
-        description: "We'll be in touch to learn more about your needs.",
-      });
-      setEmail("");
+      try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzjNLxeQr31B0E9o421wuEKY_EazgzzVp1c2eKEyMZ3MsinnOMFNpp85AKWz_j_lVmyOg/exec', {
+          method: 'POST',
+          body: JSON.stringify({ email })
+        });
+        
+        toast({
+          title: "Thanks for reaching out!",
+          description: "We'll be in touch to learn more about your needs.",
+        });
+        setEmail("");
+      } catch (error) {
+        toast({
+          title: "Error",
+          description: "There was an error submitting your email. Please try again.",
+          variant: "destructive"
+        });
+      }
     }
   };
 
